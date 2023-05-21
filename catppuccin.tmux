@@ -41,13 +41,13 @@ main() {
   # status
   set status "on"
   set status-bg "${thm_bg}"
-  set status-justify "left"
+  set status-justify "centre"
   set status-left-length "100"
   set status-right-length "100"
 
   # messages
-  set message-style "fg=${thm_cyan},bg=${thm_gray},align=centre"
-  set message-command-style "fg=${thm_cyan},bg=${thm_gray},align=centre"
+  set message-style "fg=${thm_cyan},bg=${thm_gray},align=left"
+  set message-command-style "fg=${thm_cyan},bg=${thm_gray},align=left"
 
   # panes
   set pane-border-style "fg=${thm_gray}"
@@ -64,11 +64,11 @@ main() {
   local wt_enabled
   wt_enabled="$(get_tmux_option "@catppuccin_window_tabs_enabled" "off")"
   readonly wt_enabled
-  
+
   local right_separator
   right_separator="$(get_tmux_option "@catppuccin_right_separator" "")"
   readonly right_separator
-  
+
   local left_separator
   left_separator="$(get_tmux_option "@catppuccin_left_separator" "")"
   readonly left_separator
