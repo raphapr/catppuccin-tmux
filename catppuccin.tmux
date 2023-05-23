@@ -146,7 +146,7 @@ main() {
         right_column2=$right_column2$show_date_time
     fi
 
-    set status-left "#[fg=$thm_blue,bg=$thm_gray]$right_separator#[fg=$thm_bg,bg=$thm_blue]  #[fg=$thm_fg,bg=$thm_gray] #(/bin/bash ${PLUGIN_DIR}/scripts/kube) "
+    set status-left "#[fg=$thm_blue,bg=$thm_gray]$right_separator#[fg=$thm_bg,bg=$thm_cyan]  #[fg=$thm_fg,bg=$thm_gray] #(/bin/bash ${PLUGIN_DIR}/scripts/kube) "
 
     set status-right "${right_column1},${right_column2}"
 
