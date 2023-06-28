@@ -115,7 +115,7 @@ _kube_tmux_get_context_ns() {
         fi
     fi
 
-    KUBE_TMUX_CONTEXT="$(${KUBE_TMUX_BINARY} config current-context | cut -d '/' -f 2 2>/dev/null)"
+    KUBE_TMUX_CONTEXT="$(${KUBE_TMUX_BINARY} config current-context | sed 's/.*ls-.*-cluster-\(.*\)/\1/')"
     if [[ -z "${KUBE_TMUX_CONTEXT}" ]]; then
         KUBE_TMUX_CONTEXT="N/A"
         KUBE_TMUX_NAMESPACE="N/A"
